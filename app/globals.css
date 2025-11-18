@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0A0A0F;
+  color: #FFD700;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FFD700, #DC143C);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #B8860B, #8B0000);
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.8),
+                 0 0 40px rgba(255, 215, 0, 0.5),
+                 0 0 60px rgba(255, 215, 0, 0.3);
+  }
+
+  .text-glow-red {
+    text-shadow: 0 0 20px rgba(220, 20, 60, 0.8),
+                 0 0 40px rgba(220, 20, 60, 0.5),
+                 0 0 60px rgba(220, 20, 60, 0.3);
+  }
+
+  .box-glow {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3),
+                0 0 60px rgba(220, 20, 60, 0.2),
+                inset 0 0 30px rgba(255, 215, 0, 0.1);
+  }
+
+  .divine-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #DC143C 50%, #8B0000 100%);
+  }
+
+  .divine-gradient-radial {
+    background: radial-gradient(circle at center, rgba(255, 215, 0, 0.2) 0%, rgba(220, 20, 60, 0.1) 50%, transparent 100%);
+  }
+}
